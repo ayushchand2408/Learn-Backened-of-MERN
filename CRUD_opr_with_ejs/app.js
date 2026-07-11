@@ -13,8 +13,8 @@ app.get('/' , (req,res)=>{
 })
 
 app.get('/delete/:id' , async (req,res)=>{
-     let users = await userModel.findOneAndDelete({_id: req.params.id});
-     res.redirect("/read")
+    let users = await userModel.findOneAndDelete({_id: req.params.id});
+    res.redirect("/read")
 })
 
 app.get('/read' , async (req,res)=>{
